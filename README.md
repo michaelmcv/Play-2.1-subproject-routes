@@ -12,14 +12,14 @@ Play sub projects seem to require that we have the submodule be contained with t
 
 The sample assumes we have a submodule that will be shared with other projects and a core project that will use it
 
-submodule 
- └ app
- └ conf
- └ public
-core
- └ app
- └ conf
- └ public
+    submodule 
+    └ app
+    └ conf
+    └ public
+    core
+    └ app
+    └ conf
+    └ public
 
 
 Using the new Play 2.1 feature, we will also make sure to include the routes from the submodule.
