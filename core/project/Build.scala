@@ -13,10 +13,10 @@ object ApplicationBuild extends Build {
     anorm
   )
 
+  lazy val subproject = play.Project("subproject", "1.0-SNAPSHOT", path = file("subproject"))
+
   lazy val main = play.Project(appName, appVersion, appDependencies).settings(
     // Add your own project settings here      
-  ) dependsOn(submodule) aggregate (submodule)
-
-  lazy val submodule = play.Project("submodule", "1.0-SNAPSHOT", path = file("submodule"))
+  ) dependsOn(subproject) aggregate (subproject)
 
 }

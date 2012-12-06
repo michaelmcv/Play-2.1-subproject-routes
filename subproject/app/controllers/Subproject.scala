@@ -3,8 +3,8 @@ package controllers
 import play.api._
 import play.api.mvc._
 
-import submodule.lib._
-object Submodule extends Controller {
+import subproject.lib._
+object Subproject extends Controller {
   
   def index = Action {
     Ok(views.html.index("Play 2.1 - Sub Module with routes example."))

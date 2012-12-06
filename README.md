@@ -32,14 +32,38 @@ Using the new Play 2.1 feature, we will also make sure to include the routes fro
 ## Usage
 
 
-After doing a git clone, simply run *play* inside of the _core_ directory
-         
-         cd core
-         play run
+
+First - just run the submodule :
+
+
+      cd submodule
+      play run
+
+Now navigate to 
+    
+    
+    http://localhost:9000 
+    http://localhost:9000/foo
+    http://localhost:9000/bar
+
+      
+Next try the *core* project and simply run *play* inside of the _core_ directory
+
+
+      cd core
+
+      ln -s ../submodule submodule
+ 
+      play run
+
+You can now navigate to : 
+    http://localhost:9000 
+    http://localhost:9000/sub
+    http://localhost:9000/sub/foo
+    http://localhost:9000/bar
 
 
 ### TBD
 
 - clean up README
-- explain structure and views completely
 - fix all tests
