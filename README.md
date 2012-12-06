@@ -13,9 +13,9 @@ To make this work with the its own directory I used a Softlink b/w the core and 
 
 ## Project Layout
 
-The sample assumes we have a submodule that will be shared with other projects and a core project that will use it
+The sample assumes we have a *subproject* that will be shared with other projects and a *core* project that will use it
 
-    shared_project 
+    subproject 
     └ app
     └ conf
     └ public
@@ -25,7 +25,7 @@ The sample assumes we have a submodule that will be shared with other projects a
     └ public
 
 
-Using the new Play 2.1 feature, we will also make sure to include the routes from the *shared_project*.
+Using the new Play 2.1 feature, we will also make sure to include the routes from the *subproject*.
 
 
 
@@ -36,7 +36,7 @@ Using the new Play 2.1 feature, we will also make sure to include the routes fro
 First - just run the submodule :
 
 
-      cd submodule
+      cd subproject
       play run
 
 Now navigate to 
@@ -52,8 +52,6 @@ Next try the *core* project and simply run *play* inside of the _core_ directory
 
       cd core
 
-      ln -s ../submodule submodule
- 
       play run
 
 You can now navigate to : 
