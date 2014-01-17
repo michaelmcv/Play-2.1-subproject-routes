@@ -1,4 +1,4 @@
-package subproject.lib
+package controllers.subproject.lib
 
 import play.api._
 import play.api.mvc._

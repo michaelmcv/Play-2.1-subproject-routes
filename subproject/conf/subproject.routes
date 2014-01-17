@@ -3,9 +3,9 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Submodule.index
-GET     /foo                        controllers.Submodule.foo
-GET     /bar                        controllers.Submodule.bar
+GET     /                           controllers.subproject.Application.index
+GET     /foo                        controllers.subproject.Application.foo
+GET     /bar                        controllers.subproject.Application.bar
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.at(path="/public", file)
+GET     /assets/*file               controllers.subproject.Assets.at(path="/common-public", file)

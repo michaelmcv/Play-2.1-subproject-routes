@@ -13,7 +13,9 @@ object ApplicationBuild extends Build {
     anorm
   )
 
-  lazy val subproject = play.Project("subproject", "1.0-SNAPSHOT", path = file("subproject"))
+  lazy val subproject = play.Project("subproject", "1.0-SNAPSHOT", path = file("subproject")).settings(
+    playAssetsDirectories <+= baseDirectory / "common-public"
+  )
 
   lazy val main = play.Project(appName, appVersion, appDependencies).settings(
     // Add your own project settings here      
